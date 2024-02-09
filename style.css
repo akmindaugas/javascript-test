@@ -54,6 +54,11 @@ main{
     border: 2px solid rgb(151, 148, 148);
     border-radius: 5px;
     list-style: none;
+    img{
+        max-width: 400px;
+        height: auto;
+        object-fit: cover;
+    }
 } 
 .buttons{
     max-width: 100px;

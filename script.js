@@ -12,18 +12,27 @@ console.log(items)
     items.forEach((item) => {
 
 const image = document.createElement('img'); 
-image.src = item.image;
+image.src = item.img_url;
 
-const title = document.createElement('h3');
+const title = document.createElement('h2');
 title.innerText = item.title;
 
 const price = document.createElement('h2');
-price.innerText = item.price;
+price.innerText = item.price + '€';
+
+const description = document.createElement('p');
+description.innerText = item.description;
+
+const location = document.createElement('h3');
+location.innerText = item.location;
+
+const date = document.createElement('h4');
+date.innerText = 'Item added: ' + item.date;
 
 const card = document.createElement('div');
 card.classList.add('card'); 
 
-card.append(title, image, price);
+card.append(title, image, price, description, location, date);
 
 itemCard.append(card);
       
