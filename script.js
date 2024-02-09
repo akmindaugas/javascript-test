@@ -24,7 +24,11 @@ const card = document.createElement('div');
 card.classList.add('card'); 
 
 card.append(title, image, price);
-
+card.addEventListener('click', () => {
+    console.log('click for modal');
+    document.body.append(dialog);
+    dialog.showModal();
+    });
 itemCard.append(card);
 // =====modalas=================================================
 const dialog = document.createElement('dialog');
@@ -40,26 +44,38 @@ location.innerText = item.location;
 
 const date = document.createElement('h4');
 date.innerText = 'Item added: ' + item.date;
-// ===jau deklaruoti objektai klonuojami, papildomi - pridedami
-dialog.append(title.cloneNode(true), image.cloneNode(true), price.cloneNode(true), description, location, date);
 
-//  eventlistneris modalui
-card.addEventListener('click', () => {
-    console.log('click for modal');
-    document.body.appendChild(dialog);
-    dialog.showModal();
-// =======pridedame modalo uzdarymo mygtuka=
-const closeButton = document.createElement('button');
-closeButton.innerText = 'Close';
+const closeButton = document.createElement('closeButton');
+closeButton.classList.add('card-button');
+closeButton.innerText = 'close';
+
 closeButton.addEventListener('click', (event) => {
+    console.log('click to close modal');
+
+    dialog.style.display='none';
     event.stopPropagation();
     dialog.close();
 });
 
-dialog.append(closeButton);
-    });
+// window.onclick = function(event) {
+//     if (event.target == dialog) {
+//       dialog.style.display = "none";
+//     }
+//   }
 
-    itemsList.append(card); 
+const deleteButton = document.createElement('deleteButton');
+deleteButton.innerText = 'delete item';
+deleteButton.classList.add('card-button');
+
+// ===jau deklaruoti objektai klonuojami, papildomi - pridedami
+dialog.append(title.cloneNode(true), image.cloneNode(true), price.cloneNode(true), description, location, date, closeButton, deleteButton);
+
+  itemsList.append(card); 
 });
-};
+  
+    
+    // deleteButton.addEventListener('click', (event) => {
+//     event.();
+//     ;
+}
     fetchData();

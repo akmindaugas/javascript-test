@@ -1,0 +1,12 @@
+@import '../scss/header.scss';
+@import '../scss/footer.scss';
+
+
+#forma{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    gap: 0.5rem
+    }
