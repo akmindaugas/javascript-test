@@ -44,6 +44,9 @@ location.innerText = item.location;
 
 const date = document.createElement('h4');
 date.innerText = 'Item added: ' + item.date;
+
+const contact = document.createElement('h4');
+contact.innerText = 'Contact: ' + item.email;
 // ==pridedame close ir jam eventlistneri===
 const closeButton = document.createElement('closeButton');
 closeButton.classList.add('card-button');
@@ -70,10 +73,11 @@ closeButton.addEventListener('click', (event) => {
 
 const deleteButton = document.createElement('deleteButton');
 deleteButton.innerText = 'delete item';
+
 deleteButton.classList.add('card-button');
 
 // ===jau deklaruoti objektai klonuojami, papildomi - pridedami
-dialog.append(title.cloneNode(true), image.cloneNode(true), price.cloneNode(true), description, location, date, closeButton, deleteButton);
+dialog.append(title.cloneNode(true), image.cloneNode(true), price.cloneNode(true), description, location, date, contact, closeButton, deleteButton);
 
   itemsList.append(card); 
 

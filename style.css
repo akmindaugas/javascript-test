@@ -26,6 +26,10 @@ body {
   .footer .nav-footer {
     text-align: center;
   }
+  .card {
+    padding: 0.1rem;
+    margin: 0.1rem;
+  }
 }
 .header {
   display: flex;
@@ -95,6 +99,9 @@ main {
   border: 2px solid rgb(151, 148, 148);
   border-radius: 5px; */
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 img {
