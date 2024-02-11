@@ -2,13 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #a49c9c;
-    color: white;
+    background-color:$dark-color;
+    color: $text-color-white;
     padding: 10px 0;
     position: sticky;
+    top: 0;
     a{
         text-decoration: none;
-        color: white;
+        color: $text-color-white;
     }
     li{
         list-style: none;

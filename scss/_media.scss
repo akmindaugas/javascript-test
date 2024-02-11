@@ -1,0 +1,23 @@
+@media screen and (max-width: 768px){
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+          li{
+            text-align: center;
+        }
+        .logo{
+            max-width: 100px;
+            height: auto;
+            padding-left: 1rem;
+        }
+    }
+    .footer{
+       .nav-footer{
+        text-align: center;
+        }
+    }
+    
+}
