@@ -44,7 +44,7 @@ location.innerText = item.location;
 
 const date = document.createElement('h4');
 date.innerText = 'Item added: ' + item.date;
-
+// ==pridedame close ir jam eventlistneri===
 const closeButton = document.createElement('closeButton');
 closeButton.classList.add('card-button');
 closeButton.innerText = 'close';
@@ -55,8 +55,13 @@ closeButton.addEventListener('click', (event) => {
     dialog.style.display='none';
     event.stopPropagation();
     dialog.close();
+// ===setinam timouta refreshinti puslapi po uzdarymo, duodame pauze==
+    setTimeout(() => {
+        window.location.assign('../index.html');
+    }, 500);
+    console.log('item card closed')
 });
-
+// ===neveikia : uzdaryti modala mouse click uz modalo ribu===
 // window.onclick = function(event) {
 //     if (event.target == dialog) {
 //       dialog.style.display = "none";
@@ -71,11 +76,39 @@ deleteButton.classList.add('card-button');
 dialog.append(title.cloneNode(true), image.cloneNode(true), price.cloneNode(true), description, location, date, closeButton, deleteButton);
 
   itemsList.append(card); 
+
+// =============modal: item delete function======================= 
+    deleteButton.addEventListener('click', async () => {
+    console.log('click to delete item');
+ 
+    const response = await fetch(`https://65bb510052189914b5bbb7b1.mockapi.io/sale_list/${item.id}`, 
+    {
+        method: 'DELETE',
+    
+    });
+
+const deleteItemResponse = await response.json();
+
+if (item){
+        setTimeout(() => {  
+        message.innerText = 'Item deleted successfully';
+        console.log('Modal close timout');
+        dialog.style.display = 'none';
+        dialog.close();
+    }, 1000); 
+    console.log('Item deleted successfully');
+   
+    window.location.reload();
+
+};
+
+
+});
+
 });
   
-    
-    // deleteButton.addEventListener('click', (event) => {
-//     event.();
-//     ;
-}
+
+
+
+};
     fetchData();
