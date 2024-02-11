@@ -27,7 +27,7 @@ button.addEventListener('click', async () => {
     };
 console.log(itemData);
 
-    const response = await fetch('https://65bb510052189914b5bbb7b1.mockapi.io', {
+    const response = await fetch('https://65bb510052189914b5bbb7b1.mockapi.io/sale_list', {
         method: 'POST',
         headers: {
             Accept: 'application/json',
