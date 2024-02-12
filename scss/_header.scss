@@ -8,6 +8,24 @@
     position: sticky;
     top: 0;
 
+   //   // ===============================
+.burger {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: url(../img/bars-solid.svg) no-repeat center center;
+    cursor: pointer;
+    #toggle{
+        display: none;
+        z-index: 1001;
+    }
+}
+
+
+
+ul{
+    display: flex;
+
     .link-btn{
         background-color: $dark-color;
         border: none;
@@ -20,19 +38,23 @@
         color: $text-color-white;
     }
     }   .link-btn:hover{
+        transition: 0.3s;
             background-color: $lighter-color;
         }
-
-  
     li{
         list-style: none;
-        padding-right: 1rem;
+        padding-right: 2rem;
         text-align: right;
     }
+  
+}
     #logo{
         width: 100px;
         height: auto;
-        padding-left: 1rem;
+        padding-left: 2rem;
         
     }
+// ============
+
+
 }

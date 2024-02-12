@@ -5,21 +5,39 @@
         justify-content: center;
         align-items: center;
         position: sticky;
-        li{
-                padding-right: 1rem;
-                text-align: center;
-              .link-btn{
-                text-align: center;
-            padding-right: 1rem; 
+.menu{
+  display: none;
+}
+   
+      .burger {
+        display: flex; 
+    }
+    #toggle:checked~ li{
+            display: flex;
+           flex-direction: column;
         }
+
+ul{
+transition: 0.5s;
+flex-direction: column;
+
+        li{
+                padding-right: 0rem;
+                text-align: center;
+                // display: none;
+              .link-btn{
+                transition: 0.5s;
+             text-align: center;
+            padding-right: 0rem; 
+        }
+      }
     } 
-        #logo{
-            max-width: 100px;
-            height: auto;
-            padding-left: 1rem;
+    
+       #logo{
+        transition: 0.5s;
+            max-width: 80px;
         }
     }
-
     .footer{
         justify-content: center;
         .nav-footer{
@@ -33,9 +51,6 @@
                                           }   
                      }
               }
-
-
-
     .card{
         padding: 0.1rem;
         margin: 0.1rem;
@@ -56,8 +71,7 @@
                 margin: 5px 5px;
             }
     }
-    
-}
+    }
 @media screen and (max-width: 630px){
     .card{
         padding: 0rem;

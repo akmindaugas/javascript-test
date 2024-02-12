@@ -12,19 +12,19 @@
         flex-direction: column;
             a{
                 color: $text-color-white;
-                padding-right: 1rem;
                 text-decoration: none;
                 cursor: pointer;
             }
              
             
             .link-btn{
+                transition: 0.3s;
                 background-color: $dark-color;
                 border: none;
                 border-radius: 8px;
                 width: 160px;
                 text-align: left;
-                padding-left: 1rem;
+                padding-left: 2rem;
             }   .link-btn:hover{
                     background-color: $lighter-color;
                 }}
