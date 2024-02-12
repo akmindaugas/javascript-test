@@ -16,19 +16,68 @@ body {
     position: sticky;
   }
   .header li {
+    padding-right: 1rem;
     text-align: center;
   }
-  .header .logo {
+  .header li .link-btn {
+    text-align: center;
+    padding-right: 1rem;
+  }
+  .header #logo {
     max-width: 100px;
     height: auto;
     padding-left: 1rem;
   }
+  .footer {
+    justify-content: center;
+  }
   .footer .nav-footer {
+    justify-content: center;
+  }
+  .footer .nav-footer .link-btn {
+    text-align: center;
+    padding-left: 1rem;
+  }
+  .footer .nav-footer .link-btn a {
     text-align: center;
   }
   .card {
     padding: 0.1rem;
     margin: 0.1rem;
+  }
+  .card h2 {
+    font-size: smaller;
+  }
+  .card .card-image {
+    max-width: 150px;
+    height: auto;
+  }
+  .modal h2, .modal h4 {
+    font-size: smaller;
+  }
+  .modal .card-button {
+    padding: 5px 10px;
+    margin: 5px 5px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .card {
+    padding: 0rem;
+    margin: 0rem;
+  }
+  .card h2 {
+    font-size: small;
+  }
+  .card .card-image {
+    max-width: 100px;
+    height: auto;
+  }
+  .modal h2, .modal h4 {
+    font-size: small;
+  }
+  .modal .card-button {
+    padding: 1px 2px;
+    margin: 0;
   }
 }
 .header {
@@ -41,22 +90,35 @@ body {
   position: sticky;
   top: 0;
 }
-.header a {
+.header .link-btn {
+  background-color: #363062;
+  border: none;
+  border-radius: 8px;
+  width: 160px;
+  text-align: right;
+  padding-right: 1rem;
+}
+.header .link-btn a {
   text-decoration: none;
   color: #fcfafa;
+}
+.header .link-btn:hover {
+  background-color: #435585;
 }
 .header li {
   list-style: none;
   padding-right: 1rem;
   text-align: right;
 }
-.header .logo {
-  max-width: 100px;
+.header #logo {
+  width: 100px;
   height: auto;
   padding-left: 1rem;
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
   background-color: #363062;
   padding: 10px 0;
   position: sticky;
@@ -64,9 +126,25 @@ body {
   width: 100%;
 }
 .footer .nav-footer {
+  display: flex;
+  flex-direction: column;
+}
+.footer .nav-footer a {
   color: #fcfafa;
-  text-align: right;
   padding-right: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.footer .nav-footer .link-btn {
+  background-color: #363062;
+  border: none;
+  border-radius: 8px;
+  width: 160px;
+  text-align: left;
+  padding-left: 1rem;
+}
+.footer .nav-footer .link-btn:hover {
+  background-color: #435585;
 }
 
 main {
@@ -75,19 +153,23 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 10vh;
   margin: auto;
   position: relative;
+  font-size: large;
 }
 
 .items-list {
-  max-width: 70%;
+  max-width: 40%;
+  height: -moz-min-content;
+  height: min-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
   margin: auto;
   text-align: center;
+  font-size: large;
 }
 
 .item {
@@ -105,7 +187,7 @@ main {
 }
 
 img {
-  max-width: 400px;
+  max-width: 200px;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -114,33 +196,42 @@ img {
 
 .card {
   max-width: 90%;
-  height: -moz-max-content;
-  height: max-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 1rem;
   margin: 1rem;
   border: 2px solid #363062;
   border-radius: 5px;
   list-style: none;
+  font-size: large;
 }
 
 .modal {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
-  max-width: 80%;
+  width: 50%;
   height: -moz-max-content;
   height: max-content;
   background-color: #F5E8C7;
-  display: block;
   z-index: 1000;
   text-align: center;
 }
 .modal .card-button {
-  background-color: #435585;
+  background-color: #363062;
   color: #fcfafa;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin: 10px 10px;
+}
+.modal .card-image {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */

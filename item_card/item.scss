@@ -14,6 +14,20 @@
     margin: auto;
     text-align: center;
     width: 50%;
-    gap: 0.5rem
+    gap: 0.5rem;
+    input{
+        color: $text-color-dark;
+        border: none;
+        padding: 0.3rem;
+        border-radius: 5px; 
+    }
+
+    #btn{
+        background-color: $dark-color;
+        color: $text-color-white;
+        border: none;
+        padding: 0.3rem;
+        border-radius: 5px;
+    }
     }
 }

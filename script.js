@@ -13,6 +13,7 @@ console.log(items)
 // =======turinys, matomas thumbnail mode
 const image = document.createElement('img'); 
 image.src = item.img_url;
+image.classList.add('card-image');
 
 const title = document.createElement('h2');
 title.innerText = item.title;

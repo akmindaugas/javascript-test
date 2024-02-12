@@ -5,23 +5,78 @@
         justify-content: center;
         align-items: center;
         position: sticky;
-          li{
-            text-align: center;
+        li{
+                padding-right: 1rem;
+                text-align: center;
+              .link-btn{
+                text-align: center;
+            padding-right: 1rem; 
         }
-        .logo{
+    } 
+        #logo{
             max-width: 100px;
             height: auto;
             padding-left: 1rem;
         }
     }
+
     .footer{
-       .nav-footer{
-        text-align: center;
-        }
-    }
+        justify-content: center;
+        .nav-footer{
+                    justify-content: center; 
+                           .link-btn{
+                        text-align: center;
+                        padding-left: 1rem;
+                                    a{
+                                      text-align: center;
+                                     }
+                                          }   
+                     }
+              }
+
+
+
     .card{
         padding: 0.1rem;
         margin: 0.1rem;
+        h2{
+            font-size: smaller;
+            }
+        .card-image{
+            max-width: 150px;
+            height: auto;
+        }
+    }
+    .modal{
+        h2, h4{
+            font-size:smaller;
+            }
+            .card-button{
+                padding: 5px 10px;
+                margin: 5px 5px;
+            }
     }
     
+}
+@media screen and (max-width: 630px){
+    .card{
+        padding: 0rem;
+        margin: 0rem;
+        h2{
+            font-size:small;
+            }
+        .card-image{
+            max-width: 100px;
+            height: auto;
+        }
+    }
+    .modal{
+        h2, h4{
+            font-size:small;
+            }
+            .card-button{
+                padding: 1px 2px;
+                margin: 0;
+            }
+    }
 }
