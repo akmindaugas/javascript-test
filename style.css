@@ -12,69 +12,62 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     position: sticky;
   }
   .header .menu {
-    display: none;
-  }
-  .header .burger {
-    display: flex;
-  }
-  .header #toggle:checked ~ li {
     display: flex;
     flex-direction: column;
-  }
-  .header ul {
-    transition: 0.5s;
-    flex-direction: column;
-  }
-  .header ul li {
-    padding-right: 0rem;
+    justify-content: center;
     text-align: center;
   }
-  .header ul li .link-btn {
-    transition: 0.5s;
+  .header .menu #icon {
+    display: block;
+  }
+  .header .menu button.link-btn {
     text-align: center;
-    padding-right: 0rem;
   }
-  .header #logo {
+  .header .menu img#logo {
     transition: 0.5s;
-    max-width: 80px;
+    width: 80px;
+    height: auto;
+    padding-left: 0;
   }
-  .footer {
+  .header .footer {
     justify-content: center;
   }
-  .footer .nav-footer {
+  .header .footer .nav-footer {
     justify-content: center;
   }
-  .footer .nav-footer .link-btn {
+  .header .footer .nav-footer .link-btn {
     text-align: center;
     padding-left: 1rem;
   }
-  .footer .nav-footer .link-btn a {
+  .header .footer .nav-footer .link-btn a {
     text-align: center;
   }
-  .card {
+  .header .card {
     padding: 0.1rem;
     margin: 0.1rem;
   }
-  .card h2 {
+  .header .card h2 {
     font-size: smaller;
   }
-  .card .card-image {
+  .header .card .card-image {
     max-width: 150px;
     height: auto;
   }
-  .modal h2, .modal h4 {
+  .header .modal h2, .header .modal h4 {
     font-size: smaller;
   }
-  .modal .card-button {
+  .header .modal .card-button {
     padding: 5px 10px;
     margin: 5px 5px;
   }
+  .responsive button.link-btn {
+    display: none;
+  }
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 768px) and (max-width: 630px) {
   .card {
     padding: 0rem;
     margin: 0rem;
@@ -104,21 +97,13 @@ body {
   position: sticky;
   top: 0;
 }
-.header .burger {
-  display: none;
-  width: 40px;
-  height: 40px;
-  background: url(../img/bars-solid.svg) no-repeat center center;
-  cursor: pointer;
-}
-.header .burger #toggle {
-  display: none;
-  z-index: 1001;
-}
-.header ul {
+.header .menu {
   display: flex;
 }
-.header ul .link-btn {
+.header .menu #icon {
+  display: block;
+}
+.header .menu .link-btn {
   background-color: #363062;
   border: none;
   border-radius: 8px;
@@ -126,18 +111,13 @@ body {
   text-align: right;
   padding-right: 1rem;
 }
-.header ul .link-btn a {
+.header .menu .link-btn a {
   text-decoration: none;
   color: #fcfafa;
 }
-.header ul .link-btn:hover {
+.header .menu .link-btn:hover {
   transition: 0.3s;
   background-color: #435585;
-}
-.header ul li {
-  list-style: none;
-  padding-right: 2rem;
-  text-align: right;
 }
 .header #logo {
   width: 100px;
