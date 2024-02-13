@@ -1,6 +1,5 @@
 .footer{
     display: flex;
-    flex-direction: column;
     background-color: $dark-color;
     padding: 10px 0;
     position: sticky;
@@ -9,14 +8,12 @@
    
     .nav-footer{
         display: flex;
-        flex-direction: column;
             a{
                 color: $text-color-white;
                 text-decoration: none;
                 cursor: pointer;
             }
-             
-            
+                         
             .link-btn{
                 transition: 0.3s;
                 background-color: $dark-color;

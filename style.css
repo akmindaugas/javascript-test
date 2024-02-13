@@ -32,19 +32,6 @@ body {
     height: auto;
     padding-left: 0;
   }
-  .header .footer {
-    justify-content: center;
-  }
-  .header .footer .nav-footer {
-    justify-content: center;
-  }
-  .header .footer .nav-footer .link-btn {
-    text-align: center;
-    padding-left: 1rem;
-  }
-  .header .footer .nav-footer .link-btn a {
-    text-align: center;
-  }
   .header .card {
     padding: 0.1rem;
     margin: 0.1rem;
@@ -66,8 +53,15 @@ body {
   .responsive button.link-btn {
     display: none;
   }
+  .footer {
+    flex-direction: column;
+  }
+  .footer .nav-footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
-@media screen and (max-width: 768px) and (max-width: 630px) {
+@media screen and (max-width: 630px) {
   .card {
     padding: 0rem;
     margin: 0rem;
@@ -85,6 +79,9 @@ body {
   .modal .card-button {
     padding: 1px 2px;
     margin: 0;
+  }
+  .footer .link-btn {
+    width: 100px;
   }
 }
 .header {
@@ -127,7 +124,6 @@ body {
 
 .footer {
   display: flex;
-  flex-direction: column;
   background-color: #363062;
   padding: 10px 0;
   position: sticky;
@@ -136,7 +132,6 @@ body {
 }
 .footer .nav-footer {
   display: flex;
-  flex-direction: column;
 }
 .footer .nav-footer a {
   color: #fcfafa;
@@ -182,13 +177,6 @@ main {
 }
 
 .item {
-  /* background-color: white;
-  max-width: 90%;
-  height: fit-content;
-  padding: 1rem;
-  margin: 1rem;
-  border: 2px solid rgb(151, 148, 148);
-  border-radius: 5px; */
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -204,6 +192,9 @@ img {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 90%;
   height: -moz-fit-content;
   height: fit-content;

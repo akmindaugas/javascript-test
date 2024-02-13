@@ -26,19 +26,7 @@ button.link-btn{
         }
     }
 
-    .footer{
-        justify-content: center;
-        .nav-footer{
-                    justify-content: center; 
-                           .link-btn{
-                                text-align: center;
-                                padding-left: 1rem;
-                                    a{
-                                      text-align: center;
-                                     }
-                                          }   
-                     }
-              }
+                  
     .card{
         padding: 0.1rem;
         margin: 0.1rem;
@@ -65,7 +53,14 @@ button.link-btn{
     .responsive button.link-btn{
       display: none;
        }
-
+       .footer{
+        flex-direction: column;
+       
+              .nav-footer{
+                flex-direction: column; 
+                text-align: center; 
+              }}
+      }
 @media screen and (max-width: 630px){
     .card{
         padding: 0rem;
@@ -86,6 +81,10 @@ button.link-btn{
                 padding: 1px 2px;
                 margin: 0;
             }
+    }
+    .footer{
+      .link-btn{
+        width: 100px;
     }
 }
 }

@@ -30,13 +30,6 @@ main{
     font-size: large;
   }
 .item {
-    /* background-color: white;
-    max-width: 90%;
-    height: fit-content;
-    padding: 1rem;
-    margin: 1rem;
-    border: 2px solid rgb(151, 148, 148);
-    border-radius: 5px; */
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -49,6 +42,9 @@ main{
         margin: auto; 
     }
 .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 90%;
     height: fit-content;
     padding: 1rem;

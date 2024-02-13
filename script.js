@@ -48,6 +48,15 @@ date.innerText = 'Item added: ' + item.date;
 
 const contact = document.createElement('h4');
 contact.innerText = 'Contact: ' + item.email;
+
+// ===neveikia : uzdaryti modala mouse click uz modalo ribu===
+// window.onclick = function(event) {
+//     if (event.target == dialog) {
+//       dialog.style.display = "none";
+//       event.stopPropagation();
+//       dialog.close();
+//     }
+//   }
 // ==pridedame close ir jam eventlistneri===
 const closeButton = document.createElement('closeButton');
 closeButton.classList.add('card-button');
@@ -65,12 +74,6 @@ closeButton.addEventListener('click', (event) => {
     }, 500);
     console.log('item card closed')
 });
-// ===neveikia : uzdaryti modala mouse click uz modalo ribu===
-// window.onclick = function(event) {
-//     if (event.target == dialog) {
-//       dialog.style.display = "none";
-//     }
-//   }
 
 const deleteButton = document.createElement('deleteButton');
 deleteButton.innerText = 'delete item';
