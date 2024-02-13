@@ -234,4 +234,43 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
   margin: auto;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+  padding: 1rem;
+  max-width: 60%;
+  height: -moz-max-content;
+  height: max-content;
+  border: 2px solid #363062;
+  border-radius: 5px;
+  font-size: large;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+.email-form input {
+  max-width: 80%;
+  padding: 10px;
+  border: 2px solid #363062;
+  border-radius: 5px;
+}
+.email-form button {
+  background-color: #363062;
+  color: #fcfafa;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.no-email-form {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

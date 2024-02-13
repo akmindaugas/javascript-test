@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function () {
+
 const itemsList = document.getElementById('items-list'); 
 const itemCard = document.querySelector('.item');
 // itemCard.classList.add('card');
@@ -127,4 +129,26 @@ if (item){
             x.className = "menu";
             console.log('className menu')
         }
-    }
+    };
+    // =========================email=================
+    const email = document.getElementById('email-btn');
+    const div = document.getElementById('email-form');
+    const sendButton = document.getElementById('email-form-btn');
+    emailFormFunction = () => {
+    // div.style.display = 'none';
+    div.classList.toggle('no-email-form');
+
+};
+
+
+    email.addEventListener('click', () => {
+        console.log('click for email');
+       div.classList.toggle('email-form');
+       div.classList.remove('no-email-form');
+       console.log(div.classList)
+        }
+    );
+
+
+
+});

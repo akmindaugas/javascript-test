@@ -46,9 +46,15 @@
 
     </div>
   </li>
-
 </ul>
 
+<div class="email-form no-email-form" id="email-form">
+<input type="text" placeholder="name" id="email-form-name">
+<input type="text" placeholder="email" id="email-form-email">
+<input type="text" placeholder="subject" id="email-form-subject">
+<input type="text" placeholder="message" id="email-form-message">
+<button id="email-form-btn" onclick="emailFormFunction()">send</button>
+</div>
 
 
 </div>
@@ -61,7 +67,7 @@
      <button class="link-btn">
          <a href="#">soc media</a>
     </button>
-      <button class="link-btn">
+      <button class="link-btn" id="email-btn">
          <a href="#">contact us</a>
     </button>
   
@@ -76,5 +82,6 @@
     
 
     <script src="script.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
 </body>
 </html>
