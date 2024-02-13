@@ -48,3 +48,15 @@ console.log(addedItem)
   
 });
 
+function navBarFunction() {
+    var x = document.getElementById("myNavbar");
+    console.log('click for navBarFunction');
+    if (x.className === "menu") {
+        x.className += " responsive";
+        console.log('className responsive');
+    } else {
+        x.className = "menu";
+        console.log('className menu')
+    }
+}
+
