@@ -119,7 +119,7 @@ if (item){
 };
     fetchData();
     // =============menu responsive function=======================
-    function navBarFunction() {
+     navBarFunction=()=> {
         var x = document.getElementById("myNavbar");
         console.log('click for navBarFunction');
         if (x.className === "menu") {
@@ -130,25 +130,44 @@ if (item){
             console.log('className menu')
         }
     };
-    // =========================email=================
-    const email = document.getElementById('email-btn');
-    const div = document.getElementById('email-form');
-    const sendButton = document.getElementById('email-form-btn');
-    emailFormFunction = () => {
-    // div.style.display = 'none';
-    div.classList.toggle('no-email-form');
+    // ========================send email=================
+ const div = document.getElementById('email-form');
 
-};
+const emailFormName = document.createElement('input');
+emailFormName.classList.add('email-form-name');
+emailFormName.placeholder = 'Name';
 
 
-    email.addEventListener('click', () => {
-        console.log('click for email');
-       div.classList.toggle('email-form');
-       div.classList.remove('no-email-form');
-       console.log(div.classList)
-        }
-    );
+const emailFormEmail = document.createElement('input');
+emailFormEmail.classList.add('email-form-email');
+emailFormEmail.placeholder = 'Email';
+
+const emailFormMessage = document.createElement('input');
+emailFormMessage.classList.add('email-form-message');
+emailFormMessage.placeholder = 'Message';
+
+const emailFormButton = document.createElement('button');
+emailFormButton.classList.add('email-form-button');
+emailFormButton.innerText = 'Send';
+
+emailFormButton.addEventListener('click', () => {
+    console.log('click for emailFormButton');
+
+    div.style.display = "none";
+    console.log('email sent');
+});
+
+div.append(emailFormName, emailFormEmail, emailFormMessage, emailFormButton);
 
 
+const emailSendButton = document.getElementById('email-btn');
+emailSendButton.addEventListener('click', () => {
+   
+            if (div.style.display === "none") {
+              div.style.display = "flex";
+            } else {
+              div.style.display = "none";
+            }
+          });
 
 });

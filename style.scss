@@ -109,6 +109,7 @@ main{
         padding: 10px;
         border: 2px solid $dark-color;
         border-radius: 5px;
+        gap: 1rem;
     }
     button{
         background-color: $dark-color;
@@ -119,9 +120,7 @@ main{
         cursor: pointer;
     }
 }
-.no-email-form{
-    display:none;
-}
+
 
 
 

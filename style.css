@@ -261,6 +261,7 @@ img {
   padding: 10px;
   border: 2px solid #363062;
   border-radius: 5px;
+  gap: 1rem;
 }
 .email-form button {
   background-color: #363062;
@@ -269,8 +270,4 @@ img {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.no-email-form {
-  display: none;
 }/*# sourceMappingURL=style.css.map */
