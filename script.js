@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const itemsList = document.getElementById('items-list'); 
 const itemCard = document.querySelector('.item');
-// itemCard.classList.add('card');
 
 const fetchData = async () => {
 
@@ -12,7 +11,7 @@ const items = await response.json();
 console.log(items)
 // =============foreach ciklas==============================
     items.forEach((item) => {
-// =======turinys, matomas thumbnail mode
+// =======turinys, matomas thumbnail mode========
 const image = document.createElement('img'); 
 image.src = item.img_url;
 image.classList.add('card-image');
@@ -59,7 +58,7 @@ contact.innerText = 'Contact: ' + item.email;
 //       dialog.close();
 //     }
 //   }
-// ==pridedame close ir jam eventlistneri===
+// ==pridedame modalo close ir jam eventlistneri===
 const closeButton = document.createElement('closeButton');
 closeButton.classList.add('card-button');
 closeButton.innerText = 'close';
@@ -70,7 +69,7 @@ closeButton.addEventListener('click', (event) => {
     dialog.style.display='none';
     event.stopPropagation();
     dialog.close();
-// ===setinam timouta refreshinti puslapi po uzdarymo, duodame pauze==
+// ===setinam timouta refreshinti puslapi po uzdarymo==
     setTimeout(() => {
         window.location.assign('../index.html');
     }, 500);
@@ -82,7 +81,7 @@ deleteButton.innerText = 'delete item';
 
 deleteButton.classList.add('card-button');
 
-// ===jau deklaruoti objektai klonuojami, papildomi - pridedami
+// ===jau deklaruoti objektai klonuojami, papildomi - pridedami i modala==
 dialog.append(title.cloneNode(true), image.cloneNode(true), price.cloneNode(true), description, location, date, contact, closeButton, deleteButton);
 
   itemsList.append(card); 
