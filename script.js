@@ -151,9 +151,15 @@ emailFormButton.innerText = 'Send';
 
 emailFormButton.addEventListener('click', () => {
     console.log('click for emailFormButton');
-
+// =================verifikacija=======
+    if (!emailFormName.value || !emailFormMessage.value || !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(emailFormEmail.value)) {
+      alert('please, fill in correct information');
+      return;
+    }else{
+// ===============
     div.style.display = "none";
-    console.log('email sent');
+       alert('email sent');
+    }
 });
 
 div.append(emailFormName, emailFormEmail, emailFormMessage, emailFormButton);
